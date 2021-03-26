@@ -147,14 +147,20 @@ export default {
 .item {
   color: #FFF;
   margin: 0;
-  font-weight: bold;
-  
+  font-weight: 500;
+  font-size: .9rem;
+    &:hover {
+    color: #FF283D;
+    cursor: pointer;
+    border-bottom: 1px solid #FF283D;
+  }
 }
 
 .item2 {
   color: #FF283D;
   margin: 0;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: .9rem;
   border-bottom: 1px solid #FF283D;
   display: inline;
 
