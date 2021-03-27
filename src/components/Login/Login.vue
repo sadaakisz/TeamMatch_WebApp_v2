@@ -1,6 +1,5 @@
 <template>
   <div class="login">
-    <section class="Form">
       <div class="container">
         <div class = "row no-gutters">
           <div class = "col-lg-6">
@@ -46,7 +45,6 @@
           </div>
         </div>
       </div>
-    </section>
   </div>
 </template>
 

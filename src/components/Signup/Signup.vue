@@ -1,10 +1,9 @@
 <template>
-  <div class="signup">
-    <section >
-            <div class="container">
+  <div class="signup d-flex justify-content-center align-items-center">
+            <div class="container ">
                 <div class = "row no-gutters">
                     <div class = "col-lg-5">
-                        <img src ="./SUassets/image1.png" class = "img-fluid" alt ="">
+                        <img src ="./SUassets/image1.png" class = "imagen img-fluid" alt ="">
                     </div>
                     <div class = "col-lg-7 px-5 pt-5">
                         <br/><br/>
@@ -55,7 +54,6 @@
                     </div>
                 </div>
             </div>
-            </section>
   </div>
 </template>
 
@@ -92,24 +90,28 @@ input:focus 		{ outline:none; }
 .sub{
   text-align: left;
 }
-.row{
-        top: 7rem;
-        position: absolute;
-        background-color: #FFFFFF;
-        box-shadow: 12px 12px 22px;
-  }
+
 .signup{
   height: 100%;
+  width: 100%;
   background-image: url("./SUassets/bg.jpeg");
   background-size: cover;
   background-position: center;
+  .row{
+    max-height: 70vh ;
+    background-color: #FFFFFF;
+    box-shadow: 12px 12px 22px;
+  }
 }
+.imagen{
+  max-height: 70vh;
+  width: 100%;
+  object-fit: cover;
+}
+
 .group{
-  padding-bottom: 2rem;
-}
-.date{
-  text-align: left;
-  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .btn-grad {
