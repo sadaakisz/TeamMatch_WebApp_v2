@@ -37,7 +37,7 @@
                     </label>
                   </div>  
                   <div class="form-row my-2 pt-3">
-                      <button  type ="button" class = "btn mt-2">Inicicar Sesion</button>
+                      <button  type ="button" class = "btn mt-2">Iniciar Sesión</button>
                   </div>
                   <div class="form-row pt-5">
                       <a href="#" style="color: #4D56D1; text-decoration: underline">No recuerdas tu username o contraseña?</a>
