@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style scooped lang="scss">
+<style scoped lang="scss">
 .login {
   height: 100%;
   background-image: url("./img-background-login.jpeg");
