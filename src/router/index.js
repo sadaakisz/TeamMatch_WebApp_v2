@@ -34,6 +34,11 @@ const routes = [
     name: 'FindTeam',
     component: () => import('../components/FindTeam/FindTeam.vue')
   },
+  {
+    path: '/template',
+    name: 'Template',
+    component: () => import('../components/RightTemplate.vue')
+  },
 ]
 
 const router = new VueRouter({
