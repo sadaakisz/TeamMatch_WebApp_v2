@@ -1,0 +1,164 @@
+#app {
+  font-family: Gilroy ☞, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+  transition: .5s ease;
+}
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4FC0D1;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7ADFCD;
+}
+
+.navbar {
+  position: relative;
+  top: 2.25vw;
+  width: 100vw;
+  height: 3.34vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  #nav-text > * {
+    margin-left: 4.5vw;
+    display: grid;
+    place-items: center;
+
+    font-family: Gilroy ☞, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.7em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    line-height: 1;
+    font-weight: 600;
+    color: #fff;
+    transition: .5s ease;
+  }
+  .text-primary {
+    //background-image: url("../assets/ActiveTab.png");
+    background-size: 12vw auto;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: center 1.4em;
+    width: 12em;
+    .active {
+      color: #eee;
+      position: relative;
+      left: 1em;
+      font-weight: 700;
+    }
+  }
+
+  .nav-notification {
+    width: 5vw;
+    height: 3.38vw;
+    border-radius: 0.89vw;
+    background: transparent;
+    margin-left: 8vw !important;
+    position: relative;
+    right: 2vw;
+    .not-title {
+      font-size: 1.8vw;
+      margin: 1vw auto 0 1.5vw;
+      color: #584FD8;
+    }
+    .dropdown-menu {
+      background-color: #fff;
+      border-radius: 0.89vw;
+      margin-top: 1vw;
+      border: transparent !important;
+      box-shadow: -6px -4px 30px rgba(0, 0, 0, 0.2);
+    }
+    .not-card {
+      font-size: 1vw;
+      width: 15vw;
+      border-radius: 0.89vw;
+      background: #eee;
+      border: transparent !important;
+      margin: 0.7vw 0.5vw;
+      box-shadow: 6px 4px 30px rgba(0, 0, 0, 0.2);
+      .not-card-text {
+        color: #444;
+        font-weight: 400;
+      }
+    }
+  }
+  .nav-profile {
+    margin-left: -1vw;
+    right: 1.8vw;
+    width: 12.24vw;
+    height: 3.74vw;
+    border-radius: 0.89vw;
+    background: linear-gradient(90deg, #a5ffc9 0%, #4dbfd1 100%);
+    .pr-name {
+      font-size: 0.9vw;
+      font-weight: 600;
+      display: block;
+      width: 5.88vw;
+      height: 2.23vw;
+      color: #202020;
+    }
+    .pr-plan{
+      font-size: 0.8vw;
+      font-weight: 400;
+      display: block;
+      width: 4.53vw;
+      height: 1.06vw;
+      margin-top: -0.17vw;
+      color: #727272;
+    }
+    .dropdown-menu {
+      background-color: #fff;
+      border-radius: 0.89vw;
+      border: transparent;
+      box-shadow: 6px 4px 30px rgba(0, 0, 0, 0.2);
+      margin-top: 1vw;
+      width: 12.24vw;
+    }
+    .pr-title {
+      color: #4DBFD1;
+      font-size: 1.8vw;
+      margin-bottom: 1.2vw;
+      margin-top: 1.13vw;
+      margin-left: 1.4vw;
+    }
+    .pr-action {
+      width: 10vw;
+      height: 3.45vw;
+      border-radius: 0.42vw;
+      background: #fff !important;
+      border: transparent !important;
+      margin: 0.5vw 0 1vw 1vw;
+      box-shadow: 6px 4px 30px rgba(0, 0, 0, 0.2);
+    }
+    .pr-text {
+      font-size: 1.15vw;
+      font-weight: 600;
+      margin: 0.5vw 0 0 0;
+      color: #282a3f;
+      white-space: nowrap;
+    }
+  }
+}
