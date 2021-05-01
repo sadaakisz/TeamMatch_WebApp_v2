@@ -35,7 +35,7 @@
           </template>
           <p class="not-title pr-title">Acciones</p>
           <b-button class="pr-action" href="/profile">
-            <div class="pr-text"><p>• Perfil</p></div>
+            <div class="pr-text"><p>• Editar Perfil</p></div>
           </b-button>
           <b-button class="pr-action" to="/">
             <div class="pr-text"><p>• Cerrar sesión</p></div>
