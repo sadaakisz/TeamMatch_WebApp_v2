@@ -1,25 +1,5 @@
 <template>
-  <div class="fill">
-    <div class="navarea">
-      <b-navbar  class="nav">
-      <b-nav-item>
-        <img src="../../assets/TeamMatchLogo.png">
-      </b-nav-item>
-      <b-nav-item><router-link class="nav-text" to=/fillteam>FILL MY TEAM</router-link></b-nav-item>
-      <b-nav-item><router-link class="nav-text" to=/findteam>FIND A TEAM</router-link></b-nav-item>
-      <b-nav-item><router-link class="nav-text" to=/chat>CHAT</router-link></b-nav-item>
-      <b-nav-item><router-link class="nav-text" to=/profile>PROFILE</router-link></b-nav-item>
-      <b-nav-item>
-        <div class="profile-menu">
-          <img src="./assets/NewNotificationsBell.png">
-          <img src="./assets/ProfilePic.png">
-          <p class="name">Gino Quispe</p>
-          <p class="subscription">Premium</p>
-          <img src="./assets/Forward arrow small.png">
-        </div>
-      </b-nav-item>
-    </b-navbar>
-    </div>
+  <div class="fill">    
     <div class="title-container">
       <div class="title">Select Filters</div>
     </div>
@@ -75,21 +55,24 @@ export default {
     background-image: url("./assets/fill_team_BG.png");
     background-size: cover;
     background-position: center;
+    display: grid;
+    align-content: center;
   }
 
   .title-container{
     display: grid;
     grid-template-columns: 15% 40% auto;
     
+    
   }
 
   .title{
     color: #f2f2f2;
     font-size: 4.469rem;
-    font-weight: 500;
+    font-weight: 600;
     grid-column-start: 2;
     justify-self: left;
-    align-self: center;
+    
   }
 
   .navarea{
@@ -122,7 +105,7 @@ export default {
   .filters{    
     display: grid;
     grid-template-columns: 15% 20% 50% 15%;
-    grid-template-rows: 15% auto auto;    
+    align-self: center;    
   }
 
   .labels{
@@ -130,6 +113,7 @@ export default {
     grid-template-rows: 16.67%;
     grid-column-start: 2;
     grid-row-start: 2;
+    row-gap: 5%;
   }
 
   .inputs{
@@ -138,7 +122,8 @@ export default {
     grid-template-rows: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
     column-gap: 2.5%;
     grid-column-start: 3;
-    grid-row-start: 2;  
+    grid-row-start: 2;
+    row-gap: 5%;
   }
 
   .form-text{
@@ -150,6 +135,7 @@ export default {
   .input-game{
     background-color: #232323;
     border-radius: 3.125vw;
+    border-width: 0.12vw;
     color: #FFFF;
     grid-row-start: 1;
     grid-column-start: 1;
@@ -160,23 +146,25 @@ export default {
   .input-age-left{
     background-color: #232323;
     border-radius: 3.125vw;
+    border-width: 0.12vw;
     color: #FFFF;
+    text-align: center;
     grid-row-start: 2;
     grid-column-start: 1;
-    grid-column-end: 2;
-    width: 75%;
+    width: 45%;
     justify-self: left;
   }
 
   .input-age-right{
     background-color: #232323;
     border-radius: 3.125vw;
+    border-width: 0.12vw;
     color: #FFFF;
+    text-align: center;
     grid-row-start: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    width: 75%;
-    justify-self: left;
+    grid-column-start: 1;
+    width: 45%;
+    justify-self: right;
   }
 
   .region-left{
@@ -254,6 +242,7 @@ export default {
   .input-country{
     background-color: #232323;
     border-radius: 3.125vw;
+    border-width: 0.12vw;
     color: #FFFF;
     grid-row-start: 4;
     grid-column-start: 1;
@@ -264,7 +253,9 @@ export default {
   .input-level{
     background-color: #232323;
     border-radius: 3.125vw;
+    border-width: 0.12vw;
     color: #FFFF;
+    text-align: center;
     grid-row-start: 6;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -278,7 +269,7 @@ export default {
     justify-self: right;
     width: 60%;
     align-self: center;
-    height: 75%;
+    height: 75%;    
   }
 
   .check-playstyle{
@@ -292,14 +283,14 @@ export default {
 
   .btn-aceptar{
     font-family: Gilroy ☞;
-    font-size: 2rem;    
+    font-size: 1.8rem;    
     font-weight: 600;
     color: #fff;
     border-radius: 3.125vw;
     border-color: #FF994A;
     grid-row-start: 3;
     grid-column-start: 3;
-    padding-left: 5%;
+    padding-left: 6.5%;
     justify-self: right;
     text-align: center;
     background: #232323 url('../FillTeam/assets/Forward arrow.png');
