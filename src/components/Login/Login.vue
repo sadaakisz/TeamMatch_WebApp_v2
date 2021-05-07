@@ -11,7 +11,7 @@
                     <h3 class="pt-5">Inicia sesión</h3>
                   </div>
                   <div class="form-row"> 
-                    <a>No tienes cuenta? <a href="#" style="color: #4D56D1; text-decoration: underline">  Registrate aqui</a></a> 
+                    <a>No tienes cuenta? <a href="#" @click="route('signup')" style="color: #4D56D1; text-decoration: underline">  Registrate aqui</a></a> 
                   </div>
                   <div class="form-row  my-5 pt-3">
                       <div class="group">      
@@ -60,6 +60,9 @@ export default {
     }
   },
   methods:{
+    route(location) {
+      this.$router.push(location)
+    },
     login(){
       axios.post(baseURL + 'login/', {
         username: this.pUsername,
@@ -70,6 +73,7 @@ export default {
         }
         else{
           alert("Sesion iniciada correctamente")
+          this.$router.push('loginSuccess')
         }
       })
     }
