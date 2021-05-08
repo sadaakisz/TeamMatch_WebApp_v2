@@ -11,11 +11,11 @@
                     <h3 class="pt-5">Inicia sesión</h3>
                   </div>
                   <div class="form-row"> 
-                    <a>No tienes cuenta? <a href="#" style="color: #4D56D1; text-decoration: underline">  Registrate aqui</a></a> 
+                    <a>No tienes cuenta? <a href="#" @click="route('signup')" style="color: #4D56D1; text-decoration: underline">  Registrate aqui</a></a> 
                   </div>
                   <div class="form-row  my-5 pt-3">
                       <div class="group">      
-                        <input class="inp" type="text" required>
+                        <input v-model="pUsername" class="inp" type="text" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label class="lbl">Email o Username</label>
@@ -23,7 +23,7 @@
                   </div>
                   <div class="form-row  my-3">
                     <div class="group">      
-                      <input class="inp" type="password" required>
+                      <input v-model="pPassword" class="inp" type="password" required>
                       <span class="highlight"></span>
                       <span class="bar"></span>
                       <label class="lbl">Password</label>
@@ -36,7 +36,7 @@
                     </label>
                   </div>  
                   <div class="form-row my-2 pt-3">
-                      <button  type ="button" class = "btn mt-2">Iniciar Sesión</button>
+                      <button @click="login()" type ="button" class = "btn mt-2">Iniciar Sesión</button>
                   </div>
                   <div class="form-row pt-5">
                       <a href="#" style="color: #4D56D1; text-decoration: underline">No recuerdas tu username o contraseña?</a>
@@ -49,9 +49,35 @@
 </template>
 
 <script>
-
+import { baseURL } from '@/baseURL';
+import axios from "axios";
 export default {
   name: 'Login',
+  data: ()=>{
+    return{
+      pUsername: null,
+      pPassword: null
+    }
+  },
+  methods:{
+    route(location) {
+      this.$router.push(location)
+    },
+    login(){
+      axios.post(baseURL + 'login/', {
+        username: this.pUsername,
+        password: this.pPassword
+      }).then((ResponseUser) => {
+        if(ResponseUser.data.id === null){
+           alert("El nombre de usuario y la contraseña que ingresaste no coinciden con nuestros registros. Por favor, revisa e inténtalo de nuevo.")
+        }
+        else{
+          alert("Sesion iniciada correctamente")
+          this.$router.push('loginSuccess')
+        }
+      })
+    }
+  }
 }
 </script>
 
