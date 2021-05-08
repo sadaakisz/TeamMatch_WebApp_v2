@@ -28,7 +28,7 @@
             <div style="display: flex; align-items: center; justify-content: center; margin-top: -0.84vw">
               <img src="../../assets/ProfilePic.png" style="position:absolute; top: 0.32vw; left: 0.6vw; width: 2.86vw; height: auto">
               <div style="margin-left: 2vw">
-                <p class="pr-name" style="position:absolute;top: 0.6vw; left: 4vw">Gino Quispe</p>
+                <p class="pr-name" style="position:absolute;top: 0.6vw; left: 4vw">{{this.fullName}}</p>
                 <p class="pr-plan" style="position:absolute;top: 2vw; left: 3.75vw">Premium</p>
               </div>
               <div><img src="../../assets/ProfileDropdown.png" style="position:absolute; left: 10.5vw; top: 1.8vw"></div>
