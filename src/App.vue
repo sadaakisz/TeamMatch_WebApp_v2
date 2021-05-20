@@ -6,7 +6,9 @@
 
 
 <script>
+import HomePage from './components/FindTeam/HomePage.vue'
 export default {
+  components: { HomePage },
   setup() {
     
   },
