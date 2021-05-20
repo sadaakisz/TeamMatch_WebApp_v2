@@ -1,15 +1,14 @@
 <template>
-    <div class="findhp d-flex flex-column justify-content-start align-items-center">
-        
+    <div class="fillhp d-flex flex-column justify-content-start align-items-center">
         <b-navbar class="navbar navbar-dark bg-transparent">
         <b-navbar-nav id="nav-text">
         <b-navbar-brand href="#">
             <img src="../../assets/TeamMatchLogo.png" class="d-inline-block align-top nav-logo" style="width: 1.8vw; height: auto" alt="TeamMatch">
         </b-navbar-brand>
-        <b-nav-item><router-link to="/fillteamhp">FILL MY TEAM</router-link></b-nav-item>
         <b-nav-item class="text-primary">
-            <span class="active">FIND MY TEAM</span>
+            <span class="active">FILL MY TEAM</span>
         </b-nav-item>
+        <b-nav-item ><router-link to="/findteamhp">FIND MY TEAM</router-link></b-nav-item>
         <b-nav-item>CHAT</b-nav-item>
         <b-nav-item>PROFILE</b-nav-item>
         <b-nav-item>
@@ -47,34 +46,32 @@
         </b-navbar-nav>
     </b-navbar>
         <div class="content d-flex flex-column justify-content-around align-items-start">
-            <div class="title-container">
-                <h1 class="content-title"><span>Find your next</span> squad to get<span> the game</span> going.</h1>
-            </div>
-            <p class="help-text">Utiliza esta opción si no posees un equipo y necesitas buscar un nuevo compañero o tu nuevo equipo.</p>
-            <div class="button-container d-flex justify-content-around">
-                <b-button class="create-btn" @click="createTeam">Create team</b-button>
-                <b-button class="select-btn" variant="outline-light" @click="selectFilters">Select filters</b-button>
-                <b-button class="fill-btn" @click="findTeam">Find my team</b-button>
-            </div>
+        <div class="title-container">
+            <h1 class="content-title"><span>Search</span> for the last <span>member</span> of your squad.</h1>
         </div>
+        <p class="help-text">Utiliza esta opción si ya posees un equipo pero necesitas completarlo con uno o más jugadores.</p>
+        <div class="button-container d-flex justify-content-around">
+            <b-button class="create-btn" @click="createTeam">Create team</b-button>
+            <b-button class="select-btn" variant="outline-light" @click="selectFilters">Select filters</b-button>
+            <b-button class="fill-btn" @click="fillTeam">Fill my team</b-button>
+        </div>
+    </div>
     </div>
 </template>
 
 <script>
 export default {
-  name: "HomePage"
+  name: "HomePageFT"
 }
 </script>
 
 <style scoped lang="scss">
 @import "../../assets/scss/styles.scss";
 
-
-
-.findhp {
+.fillhp {
   height: 100%;
   width: 100%;
-  background-image: url("./fill_team_BG.png");
+  background-image: url("../FillTeam/assets/fill_team_BG.png");
   background-size: cover;
   background-position: center;
 }
@@ -87,7 +84,7 @@ export default {
 }
 
 .title-container {
-  width: 60%;
+  width: 65%;
   
 }
 
@@ -144,10 +141,10 @@ export default {
     filter: brightness(.6);
   }
 }
+
 a {
     color:#fff
     
 }
-
 
 </style>
