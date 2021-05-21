@@ -35,6 +35,11 @@ const routes = [
     component: () => import('../components/FillTeam/FillTeam.vue')
   },
   {
+    path: '/fillteamresults',
+    name: 'FillTeamResutls',
+    component: () => import('../components/FillTeam/FillTeamResults.vue')
+  },
+  {
     path: '/findteam',
     name: 'FindTeam',
     component: () => import('../components/FindTeam/FindTeam.vue')
