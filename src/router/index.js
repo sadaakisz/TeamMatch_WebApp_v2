@@ -40,6 +40,16 @@ const routes = [
     component: () => import('../components/FindTeam/FindTeam.vue')
   },
   {
+    path: '/fillteamhp',
+    name: 'FillTeamHomePage',
+    component: () => import('../components/FillTeam/HomePageFT.vue')
+  },
+  {
+    path: '/findteamhp',
+    name: 'FindTeamHomePage',
+    component: () => import('../components/FindTeam/HomePage.vue')
+  },
+  {
     path: '/template',
     name: 'Template',
     component: () => import('../components/RightTemplate.vue')
