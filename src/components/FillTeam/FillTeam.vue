@@ -64,7 +64,8 @@
         </div>
         <b-form class="inputs">
           <b-form-input class="input-game" id="input-1" placeholder="P. ej: TFT"></b-form-input>          
-          <b-form-input class="input-age-left" id="input-2" placeholder="Ej. 18"></b-form-input>          
+          <b-form-input class="input-age-left" id="input-2" placeholder="Ej. 18"></b-form-input>
+          
           <b-form-input class="input-age-right" id="input-2" placeholder="Ej. 24"></b-form-input>
           <b-form-group v-if="!regionChecked" class="region-left-selected"><b><u>LOCAL</u></b></b-form-group>
           <b-form-group v-else class="region-left"><b>LOCAL</b></b-form-group>
@@ -79,12 +80,14 @@
           <b-form-group v-else class="playstyle-right"><b>COMPETITIVO</b></b-form-group>
           <b-form-input class="input-level" id="input-6" placeholder="Ej. 55"></b-form-input>
 
-          <b-btn class="btn-aceptar">Aceptar y filtrar</b-btn>
+          <router-link class="btn-container" to="fillteamresults">
+            <b-btn class="btn-aceptar">Aceptar y filtrar</b-btn>
+          </router-link>
         </b-form>
 
            
     </div>  
-  </div>
+    </div>
 
 
 </template>
@@ -113,7 +116,6 @@ export default {
     display: grid;
     grid-template-rows: 10% 20% auto;
   }
-
 
   .title-container{
     display: grid;
@@ -310,21 +312,25 @@ export default {
     height: 75%;
   }
 
+  .btn-container{
+    grid-row-start: 7;
+    grid-column-start: 2;
+    align-self: center;
+  }
+
   .btn-aceptar{
     font-family: Gilroy ☞;
     font-size: 1.65vw;    
     font-weight: 600;
     color: #fff;
     border-radius: 3.125vw;
-    border-color: #FF994A;
-    grid-row-start: 7;
-    grid-column-start: 2;
+    border-color: #FF994A;    
     width: 21vw;
     text-align: center;
     background: #232323 url('../FillTeam/assets/Forward arrow.png');
     background-repeat: no-repeat;
     background-position-y:  center;
     background-position-x: 5%;
-    align-self: center;
+    
   }
 </style>
