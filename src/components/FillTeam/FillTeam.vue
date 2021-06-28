@@ -117,7 +117,6 @@ export default {
     grid-template-rows: 10% 20% auto;
   }
 
-
   .title-container{
     display: grid;
     align-content: center;

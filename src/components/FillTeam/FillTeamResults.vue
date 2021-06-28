@@ -54,48 +54,44 @@
         </div>
         
         <div class="player-list">
-            <div class="player-card">      
-                <div class="username">empe_leycal</div>
-                <div class="details">Lv 110 - 20 years old</div>
-                <div class="invite">
-                    <b-button>
-                        Invite to team
-                    </b-button>
-                </div>
-                <div class="view">
-                    <b-button>
-                        View details
-                    </b-button>
-                </div>
-                <div class="favorite">
-                    <b-button>
-                        fav
-                    </b-button>
-                </div>
+            <div class="rating">text</div>
+          <div class="player-card cyan">             
+            <div class="username">empe_leycal</div>
+            <div class="details">Lv 110 - 20 years old</div>
+            <div class="invite">
+                <b-button class="card-btn">
+                    Invite to team
+                </b-button>
             </div>
-
-            <div class="player-card2">      
-                <div class="username">calixto21</div>
-                <div class="details">Lv 110 - 20 years old</div>
-                <div class="invite">
-                    <b-button>
-                        Invite to team
-                    </b-button>
-                </div>
-                <div class="view">
-                    <b-button>
-                        View details
-                    </b-button>
-                </div>
-                <div class="favorite">
-                    <b-button>
-                        fav
-                    </b-button>
-                </div>
+            <div class="view">
+                <b-button class="card-btn">
+                    View details
+                </b-button>
             </div>
-
-
-
+            <div class="favorite">
+                <b-button class="fav-btn"></b-button>
+            </div>
+          </div>
+            
+          <div class="player-card magenta">      
+              <div class="username">calixto21</div>
+              <div class="details">Lv 118 - 19 years old</div>
+              <div class="invite">
+                  <b-button class="card-btn">
+                      Invite to team
+                  </b-button>
+              </div>
+              <div class="view">
+                  <b-button class="card-btn">
+                      View details
+                  </b-button>
+              </div>
+              <div class="favorite">
+                  <b-button class="fav-btn">                        
+                  </b-button>
+              </div>
+          </div>
+            
         </div>
         
     </div>
@@ -120,12 +116,12 @@ export default {
     background-position: center;
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 15% 70% 15%;
+    grid-template-rows: 12.5% 72.5% 15%;
 }
 
 .found-players{
     display: grid;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 35% 65%;
     grid-template-columns: 100%;    
     justify-content: left;
     grid-row-start: 2;
@@ -142,7 +138,6 @@ export default {
     font-size: 4.469rem;
     font-weight: 600;
     text-align: left;
-    
 }
 
 .subtitle{
@@ -154,72 +149,142 @@ export default {
 
 .player-list{
     grid-column-start: 1;
-    grid-row-start: 2;    
+    grid-row-start: 2;
     display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: 5% 20% 5% 20% 5% 20% 5% 20%;
+    grid-template-columns: 47.5% 5% 47.5%;
     align-self: stretch;
     justify-self: stretch;
-    row-gap: 10%;
+  }
+
+.rating{
+  width: 6.15vw;
+  background: blue;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  align-self: end;
+  justify-self: end;
 }
 
-.player-card{
+.player-card {
     display: grid;
     background: #f2f2f2; 
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 60% 30% 10%;
     grid-template-rows: 50% 50%;
     grid-template-areas: 
         "info1 action1 favorite"
         "info2 action2 favorite";
     place-items: center;
+    border-radius: 1.5vw;
+    border: transparent;
+    padding: 0 1.25vw 0 1.25vw;
+
+    .invite{
+      grid-column-start: action1-start;
+      grid-row-start: info1-start;
+      align-self: center;
+    }
+
+    .view{
+        grid-column-start: action2-start;
+        grid-row-start: info2-start;
+        align-self: center;
+    }
+
+    .favorite{
+        grid-column-start: favorite-start;
+        grid-row-start: favorite-start;
+        grid-row-end: info2-end;
+        align-self: center;
+    }
+
+    .username{
+      grid-column-start: info1-start;
+      grid-column-end: action1-start;
+      grid-row-start: info1-start;
+      font-size: 1.35vw;
+      font-weight: 600;
+      justify-self: left;
+      align-self: end;
+    }
+
+    .details{
+      grid-column-start: info2-start;
+      font-size: 0.94vw;
+      font-weight: 500;
+      justify-self: left;
+      align-self: start;
+    }
+
+    .card-btn{
+      border-radius: 2vw;
+      font-size: 1.04vw;
+      font-weight: 600;
+      background: #4B7BFF;
+      border: transparent;
+      padding: 0.25vw 0.75vw;
+      width: 9.4vw;
+    }
+
+    .fav-btn{
+      background: #fff url('../FillTeam/assets/icon_star.png');
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: center;
+      border: transparent;
+      width: 2.6vw;
+      height: 2.6vw;
+      border-radius: 100%;
+      justify-self: center;
+    }   
 }
 
-.player-card2{
-    display: grid;
-    background: #f2f2f2; 
-    grid-column-start: 1;
-    grid-row-start: 2;
-    grid-template-columns: 50% 25% 25%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: 
-        "info1 action1 favorite"
-        "info2 action2 favorite";
-    place-items: center;
+.cyan {
+  background: linear-gradient(90deg, #80FFE3 0%, #80A2FF 100%);
+  grid-column-start: 1;
+  grid-row-start: 2;
+  }
+
+.magenta{
+  background: linear-gradient(90deg, #7591FF 0%, #FF75FA 100%);
+  grid-column-start: 1;
+  grid-row-start: 4;
 }
 
-.username{
-    grid-column-start: info1-start;
-    grid-column-end: action1-start;
-    grid-row-start: info1-start;
-    text-align: left;
+.orange{
+  background: linear-gradient(90deg, #F6FF75 0%, #F54A4A 100%);
+  grid-column-start: 1;
+  grid-row-start: 6;
 }
 
-.details{
-    grid-column-start: info2-start;
-    text-align: left;
+.green{
+  background: linear-gradient(90deg, #F6FF75 0%, #F54A4A 100%);
+  grid-column-start: 1;
+  grid-row-start: 8;
 }
 
-.invite{
-    grid-column-start: action1-start;
-    grid-row-start: info1-start;
-    align-self: center;
+.blue{
+  background: linear-gradient(90deg, #6CDBC2 0%, #05206B 100%);
+  grid-column-start: 3;
+  grid-row-start: 1;
 }
 
-.view{
-    grid-column-start: action2-start;
-    grid-row-start: info2-start;
-    align-self: center;
+.red{
+  background: linear-gradient(90deg, #FF7575 0%, #70041A 100%);
+  grid-column-start: 3;
+  grid-row-start: 2;
 }
 
-.favorite{
-    grid-column-start: favorite-start;
-    grid-row-start: favorite-start;
-    grid-row-end: info2-end;
-    align-self: center;
+.purple{
+  background: linear-gradient(90deg, #FF759B 0%, #290551 100%);
+  grid-column-start: 3;
+  grid-row-start: 3;
 }
 
-
+.yellow{
+  background: linear-gradient(90deg, #EEB531 0%, #FFE875 100%);
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
 
 </style>
