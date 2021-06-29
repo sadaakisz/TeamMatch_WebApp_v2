@@ -53,7 +53,9 @@
             <p class="help-text">Utiliza esta opción si no posees un equipo y necesitas buscar un nuevo compañero o tu nuevo equipo.</p>
             <div class="button-container d-flex justify-content-around">
                 <b-button class="create-btn" @click="createTeam">Create team</b-button>
-                <b-button class="select-btn" variant="outline-light" @click="selectFilters">Select filters</b-button>
+                <router-link to="/findteamselectfilters">
+                  <b-button class="select-btn" variant="outline-light" @click="selectFilters">Select filters</b-button>
+                </router-link>
                 <b-button class="fill-btn" @click="findTeam">Find my team</b-button>
             </div>
         </div>

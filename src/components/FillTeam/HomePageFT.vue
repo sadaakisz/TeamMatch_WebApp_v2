@@ -134,7 +134,7 @@
       </p>
       <div class="button-container d-flex justify-content-around">
         <b-button class="create-btn" @click="createTeam">Create team</b-button>
-        <router-link to="/fillteam">
+        <router-link to="/fillteamselectfilters">
           <b-button
             class="select-btn"
             variant="outline-light"
