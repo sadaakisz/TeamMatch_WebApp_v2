@@ -42,7 +42,7 @@ const routes = [
   {
     path: '/findteam',
     name: 'FindTeam',
-    component: () => import('../components/FindTeam/FindTeam.vue')
+    component: () => import('../components/FindTeam/HomePage.vue')
   },
   {
     path: '/fillteamhp',
