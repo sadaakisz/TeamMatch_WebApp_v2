@@ -16,7 +16,7 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(VueAxios)
 Vue.use(VueAnalytics, {
-  id: '277558762',
+  id: 'G-FQLG7L6Z6F',
   router
 })
 
