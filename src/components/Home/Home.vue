@@ -2,8 +2,8 @@
   <div class="home d-flex flex-column justify-content-start align-items-center">
     <div class="nav justify-content-around align-items-center">
       <img class="logo" src="../../assets/TeamMatchLogo.png">
-      <p class="nav-link" @click="route('fillteam')">FILL MY TEAM</p>
-      <p class="nav-link" @click="route('findteam')">FIND MY TEAM</p>
+      <p class="nav-link" @click="route('fillteamselectfilters')">FILL MY TEAM</p>
+      <p class="nav-link" @click="route('findteamselectfilters')">FIND MY TEAM</p>
       <p class="nav-link" @click="route('chat')">CHAT</p>
       <p class="nav-link" @click="route('profile')">PROFILE</p>
       <b-button class="signup-btn" @click="route('signup')">REGISTRARSE</b-button>

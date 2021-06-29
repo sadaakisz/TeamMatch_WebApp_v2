@@ -74,7 +74,7 @@ export default {
 .findhp {
   height: 100%;
   width: 100%;
-  background-image: url("./fill_team_BG.png");
+  background-image: url("./assets/fill_team_BG.png");
   background-size: cover;
   background-position: center;
 }

@@ -30,9 +30,9 @@ const routes = [
     component: () => import('../components/Profile/Profile.vue')
   },
   {
-    path: '/fillteam',
-    name: 'FillTeam',
-    component: () => import('../components/FillTeam/FillTeam.vue')
+    path: '/fillteamselectfilters',
+    name: 'FillTeamSelectFilters',
+    component: () => import('../components/FillTeam//FillTeamSelectFilters.vue')
   },
   {
     path: '/fillteamresults',
@@ -40,9 +40,9 @@ const routes = [
     component: () => import('../components/FillTeam/FillTeamResults.vue')
   },
   {
-    path: '/findteam',
-    name: 'FindTeam',
-    component: () => import('../components/FindTeam/FindTeam.vue')
+    path: '/findteamselectfilters',
+    name: 'FindTeamSelectFilters',
+    component: () => import('../components/FindTeam/FindTeamSelectFilters.vue')
   },
   {
     path: '/fillteamhp',
