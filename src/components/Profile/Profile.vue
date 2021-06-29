@@ -2,7 +2,7 @@
   <div class="profile">
    <b-navbar class="navbar navbar-dark bg-transparent">
     <b-navbar-nav id="nav-text">
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="/">
         <img src="../../assets/TeamMatchLogo.png" class="d-inline-block align-top nav-logo" style="width: 1.8vw; height: auto" alt="TeamMatch">
       </b-navbar-brand>
       <b-nav-item class="text-primary">
